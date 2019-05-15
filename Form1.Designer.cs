@@ -33,23 +33,30 @@
             this.groupBoxInput = new System.Windows.Forms.GroupBox();
             this.browseFileName = new System.Windows.Forms.TextBox();
             this.groupBoxSuccessRates = new System.Windows.Forms.GroupBox();
-            this.successTitleNb = new System.Windows.Forms.TextBox();
-            this.successTitleKn = new System.Windows.Forms.TextBox();
-            this.successTitleDt = new System.Windows.Forms.TextBox();
-            this.successTitleAnn = new System.Windows.Forms.TextBox();
-            this.successTitleSvm = new System.Windows.Forms.TextBox();
-            this.successPrcNb = new System.Windows.Forms.TextBox();
-            this.successPrcKn = new System.Windows.Forms.TextBox();
-            this.successPrcDt = new System.Windows.Forms.TextBox();
-            this.successPrcAnn = new System.Windows.Forms.TextBox();
-            this.successPrcSvm = new System.Windows.Forms.TextBox();
-            this.successRtNb = new System.Windows.Forms.TextBox();
-            this.successRtKn = new System.Windows.Forms.TextBox();
-            this.successRtDt = new System.Windows.Forms.TextBox();
-            this.successRtAnn = new System.Windows.Forms.TextBox();
+            this.textMostSuccessful = new System.Windows.Forms.TextBox();
             this.successRtSvm = new System.Windows.Forms.TextBox();
+            this.successRtAnn = new System.Windows.Forms.TextBox();
+            this.successRtDt = new System.Windows.Forms.TextBox();
+            this.successRtKn = new System.Windows.Forms.TextBox();
+            this.successRtNb = new System.Windows.Forms.TextBox();
+            this.successPrcSvm = new System.Windows.Forms.TextBox();
+            this.successPrcAnn = new System.Windows.Forms.TextBox();
+            this.successPrcDt = new System.Windows.Forms.TextBox();
+            this.successPrcKn = new System.Windows.Forms.TextBox();
+            this.successPrcNb = new System.Windows.Forms.TextBox();
+            this.successTitleSvm = new System.Windows.Forms.TextBox();
+            this.successTitleAnn = new System.Windows.Forms.TextBox();
+            this.successTitleDt = new System.Windows.Forms.TextBox();
+            this.successTitleKn = new System.Windows.Forms.TextBox();
+            this.successTitleNb = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.testButton = new System.Windows.Forms.Button();
+            this.inputPanel = new System.Windows.Forms.Panel();
+            this.testResult = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBoxInput.SuspendLayout();
             this.groupBoxSuccessRates.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -89,6 +96,7 @@
             // 
             // groupBoxSuccessRates
             // 
+            this.groupBoxSuccessRates.Controls.Add(this.textMostSuccessful);
             this.groupBoxSuccessRates.Controls.Add(this.successRtSvm);
             this.groupBoxSuccessRates.Controls.Add(this.successRtAnn);
             this.groupBoxSuccessRates.Controls.Add(this.successRtDt);
@@ -106,126 +114,70 @@
             this.groupBoxSuccessRates.Controls.Add(this.successTitleNb);
             this.groupBoxSuccessRates.Location = new System.Drawing.Point(11, 98);
             this.groupBoxSuccessRates.Name = "groupBoxSuccessRates";
-            this.groupBoxSuccessRates.Size = new System.Drawing.Size(776, 133);
+            this.groupBoxSuccessRates.Size = new System.Drawing.Size(776, 151);
             this.groupBoxSuccessRates.TabIndex = 2;
             this.groupBoxSuccessRates.TabStop = false;
             this.groupBoxSuccessRates.Text = "Success Rates";
             // 
-            // successTitleNb
+            // textMostSuccessful
             // 
-            this.successTitleNb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successTitleNb.Location = new System.Drawing.Point(36, 32);
-            this.successTitleNb.Name = "successTitleNb";
-            this.successTitleNb.ReadOnly = true;
-            this.successTitleNb.Size = new System.Drawing.Size(102, 13);
-            this.successTitleNb.TabIndex = 0;
-            this.successTitleNb.Text = "Naive-Bayes";
-            this.successTitleNb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textMostSuccessful.BackColor = System.Drawing.SystemColors.Window;
+            this.textMostSuccessful.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textMostSuccessful.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textMostSuccessful.ForeColor = System.Drawing.Color.Green;
+            this.textMostSuccessful.Location = new System.Drawing.Point(8, 132);
+            this.textMostSuccessful.Name = "textMostSuccessful";
+            this.textMostSuccessful.Size = new System.Drawing.Size(749, 13);
+            this.textMostSuccessful.TabIndex = 12;
+            this.textMostSuccessful.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successTitleKn
+            // successRtSvm
             // 
-            this.successTitleKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successTitleKn.Location = new System.Drawing.Point(168, 32);
-            this.successTitleKn.Name = "successTitleKn";
-            this.successTitleKn.ReadOnly = true;
-            this.successTitleKn.Size = new System.Drawing.Size(113, 13);
-            this.successTitleKn.TabIndex = 1;
-            this.successTitleKn.Text = "K-Nearest Neighbour";
-            this.successTitleKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.successTitleKn.TextChanged += new System.EventHandler(this.successTitleKn_TextChanged);
+            this.successRtSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successRtSvm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successRtSvm.Location = new System.Drawing.Point(611, 99);
+            this.successRtSvm.Name = "successRtSvm";
+            this.successRtSvm.ReadOnly = true;
+            this.successRtSvm.Size = new System.Drawing.Size(102, 16);
+            this.successRtSvm.TabIndex = 11;
+            this.successRtSvm.Text = "...";
+            this.successRtSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successTitleDt
+            // successRtAnn
             // 
-            this.successTitleDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successTitleDt.Location = new System.Drawing.Point(314, 32);
-            this.successTitleDt.Name = "successTitleDt";
-            this.successTitleDt.ReadOnly = true;
-            this.successTitleDt.Size = new System.Drawing.Size(113, 13);
-            this.successTitleDt.TabIndex = 2;
-            this.successTitleDt.Text = "Decision Tree";
-            this.successTitleDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successRtAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successRtAnn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successRtAnn.Location = new System.Drawing.Point(461, 99);
+            this.successRtAnn.Name = "successRtAnn";
+            this.successRtAnn.ReadOnly = true;
+            this.successRtAnn.Size = new System.Drawing.Size(102, 16);
+            this.successRtAnn.TabIndex = 11;
+            this.successRtAnn.Text = "...";
+            this.successRtAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successTitleAnn
+            // successRtDt
             // 
-            this.successTitleAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successTitleAnn.Location = new System.Drawing.Point(460, 32);
-            this.successTitleAnn.Name = "successTitleAnn";
-            this.successTitleAnn.ReadOnly = true;
-            this.successTitleAnn.Size = new System.Drawing.Size(113, 13);
-            this.successTitleAnn.TabIndex = 3;
-            this.successTitleAnn.Text = "Artifician N. N.";
-            this.successTitleAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successRtDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successRtDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successRtDt.Location = new System.Drawing.Point(321, 99);
+            this.successRtDt.Name = "successRtDt";
+            this.successRtDt.ReadOnly = true;
+            this.successRtDt.Size = new System.Drawing.Size(102, 16);
+            this.successRtDt.TabIndex = 11;
+            this.successRtDt.Text = "...";
+            this.successRtDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successTitleSvm
+            // successRtKn
             // 
-            this.successTitleSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successTitleSvm.Location = new System.Drawing.Point(610, 32);
-            this.successTitleSvm.Name = "successTitleSvm";
-            this.successTitleSvm.ReadOnly = true;
-            this.successTitleSvm.Size = new System.Drawing.Size(113, 13);
-            this.successTitleSvm.TabIndex = 4;
-            this.successTitleSvm.Text = "Support Vector M.";
-            this.successTitleSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // successPrcNb
-            // 
-            this.successPrcNb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successPrcNb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successPrcNb.Location = new System.Drawing.Point(36, 68);
-            this.successPrcNb.Name = "successPrcNb";
-            this.successPrcNb.ReadOnly = true;
-            this.successPrcNb.Size = new System.Drawing.Size(102, 25);
-            this.successPrcNb.TabIndex = 5;
-            this.successPrcNb.Text = "0%";
-            this.successPrcNb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // successPrcKn
-            // 
-            this.successPrcKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successPrcKn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successPrcKn.Location = new System.Drawing.Point(168, 68);
-            this.successPrcKn.Name = "successPrcKn";
-            this.successPrcKn.ReadOnly = true;
-            this.successPrcKn.Size = new System.Drawing.Size(102, 25);
-            this.successPrcKn.TabIndex = 6;
-            this.successPrcKn.Text = "0%";
-            this.successPrcKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // successPrcDt
-            // 
-            this.successPrcDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successPrcDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successPrcDt.Location = new System.Drawing.Point(334, 68);
-            this.successPrcDt.Name = "successPrcDt";
-            this.successPrcDt.ReadOnly = true;
-            this.successPrcDt.Size = new System.Drawing.Size(89, 25);
-            this.successPrcDt.TabIndex = 7;
-            this.successPrcDt.Text = "0%";
-            this.successPrcDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // successPrcAnn
-            // 
-            this.successPrcAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successPrcAnn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successPrcAnn.Location = new System.Drawing.Point(474, 68);
-            this.successPrcAnn.Name = "successPrcAnn";
-            this.successPrcAnn.ReadOnly = true;
-            this.successPrcAnn.Size = new System.Drawing.Size(89, 25);
-            this.successPrcAnn.TabIndex = 8;
-            this.successPrcAnn.Text = "0%";
-            this.successPrcAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // successPrcSvm
-            // 
-            this.successPrcSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successPrcSvm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successPrcSvm.Location = new System.Drawing.Point(624, 68);
-            this.successPrcSvm.Name = "successPrcSvm";
-            this.successPrcSvm.ReadOnly = true;
-            this.successPrcSvm.Size = new System.Drawing.Size(89, 25);
-            this.successPrcSvm.TabIndex = 9;
-            this.successPrcSvm.Text = "0%";
-            this.successPrcSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successRtKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successRtKn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successRtKn.Location = new System.Drawing.Point(168, 99);
+            this.successRtKn.Name = "successRtKn";
+            this.successRtKn.ReadOnly = true;
+            this.successRtKn.Size = new System.Drawing.Size(102, 16);
+            this.successRtKn.TabIndex = 11;
+            this.successRtKn.Text = "...";
+            this.successRtKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // successRtNb
             // 
@@ -240,59 +192,180 @@
             this.successRtNb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.successRtNb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // successRtKn
+            // successPrcSvm
             // 
-            this.successRtKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successRtKn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successRtKn.Location = new System.Drawing.Point(168, 99);
-            this.successRtKn.Name = "successRtKn";
-            this.successRtKn.ReadOnly = true;
-            this.successRtKn.Size = new System.Drawing.Size(102, 16);
-            this.successRtKn.TabIndex = 11;
-            this.successRtKn.Text = "...";
-            this.successRtKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successPrcSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successPrcSvm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successPrcSvm.Location = new System.Drawing.Point(624, 68);
+            this.successPrcSvm.Name = "successPrcSvm";
+            this.successPrcSvm.ReadOnly = true;
+            this.successPrcSvm.Size = new System.Drawing.Size(89, 25);
+            this.successPrcSvm.TabIndex = 9;
+            this.successPrcSvm.Text = "0%";
+            this.successPrcSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successRtDt
+            // successPrcAnn
             // 
-            this.successRtDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successRtDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successRtDt.Location = new System.Drawing.Point(321, 99);
-            this.successRtDt.Name = "successRtDt";
-            this.successRtDt.ReadOnly = true;
-            this.successRtDt.Size = new System.Drawing.Size(102, 16);
-            this.successRtDt.TabIndex = 11;
-            this.successRtDt.Text = "...";
-            this.successRtDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successPrcAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successPrcAnn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successPrcAnn.Location = new System.Drawing.Point(474, 68);
+            this.successPrcAnn.Name = "successPrcAnn";
+            this.successPrcAnn.ReadOnly = true;
+            this.successPrcAnn.Size = new System.Drawing.Size(89, 25);
+            this.successPrcAnn.TabIndex = 8;
+            this.successPrcAnn.Text = "0%";
+            this.successPrcAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successRtAnn
+            // successPrcDt
             // 
-            this.successRtAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successRtAnn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successRtAnn.Location = new System.Drawing.Point(461, 99);
-            this.successRtAnn.Name = "successRtAnn";
-            this.successRtAnn.ReadOnly = true;
-            this.successRtAnn.Size = new System.Drawing.Size(102, 16);
-            this.successRtAnn.TabIndex = 11;
-            this.successRtAnn.Text = "...";
-            this.successRtAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successPrcDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successPrcDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successPrcDt.Location = new System.Drawing.Point(334, 68);
+            this.successPrcDt.Name = "successPrcDt";
+            this.successPrcDt.ReadOnly = true;
+            this.successPrcDt.Size = new System.Drawing.Size(89, 25);
+            this.successPrcDt.TabIndex = 7;
+            this.successPrcDt.Text = "0%";
+            this.successPrcDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // successRtSvm
+            // successPrcKn
             // 
-            this.successRtSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.successRtSvm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.successRtSvm.Location = new System.Drawing.Point(611, 99);
-            this.successRtSvm.Name = "successRtSvm";
-            this.successRtSvm.ReadOnly = true;
-            this.successRtSvm.Size = new System.Drawing.Size(102, 16);
-            this.successRtSvm.TabIndex = 11;
-            this.successRtSvm.Text = "...";
-            this.successRtSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.successPrcKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successPrcKn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successPrcKn.Location = new System.Drawing.Point(168, 68);
+            this.successPrcKn.Name = "successPrcKn";
+            this.successPrcKn.ReadOnly = true;
+            this.successPrcKn.Size = new System.Drawing.Size(102, 25);
+            this.successPrcKn.TabIndex = 6;
+            this.successPrcKn.Text = "0%";
+            this.successPrcKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successPrcNb
+            // 
+            this.successPrcNb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successPrcNb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.successPrcNb.Location = new System.Drawing.Point(36, 68);
+            this.successPrcNb.Name = "successPrcNb";
+            this.successPrcNb.ReadOnly = true;
+            this.successPrcNb.Size = new System.Drawing.Size(102, 25);
+            this.successPrcNb.TabIndex = 5;
+            this.successPrcNb.Text = "0%";
+            this.successPrcNb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successTitleSvm
+            // 
+            this.successTitleSvm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successTitleSvm.Location = new System.Drawing.Point(610, 32);
+            this.successTitleSvm.Name = "successTitleSvm";
+            this.successTitleSvm.ReadOnly = true;
+            this.successTitleSvm.Size = new System.Drawing.Size(113, 13);
+            this.successTitleSvm.TabIndex = 4;
+            this.successTitleSvm.Text = "Support Vector M.";
+            this.successTitleSvm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successTitleAnn
+            // 
+            this.successTitleAnn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successTitleAnn.Location = new System.Drawing.Point(460, 32);
+            this.successTitleAnn.Name = "successTitleAnn";
+            this.successTitleAnn.ReadOnly = true;
+            this.successTitleAnn.Size = new System.Drawing.Size(113, 13);
+            this.successTitleAnn.TabIndex = 3;
+            this.successTitleAnn.Text = "Artifician N. N.";
+            this.successTitleAnn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successTitleDt
+            // 
+            this.successTitleDt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successTitleDt.Location = new System.Drawing.Point(314, 32);
+            this.successTitleDt.Name = "successTitleDt";
+            this.successTitleDt.ReadOnly = true;
+            this.successTitleDt.Size = new System.Drawing.Size(113, 13);
+            this.successTitleDt.TabIndex = 2;
+            this.successTitleDt.Text = "Decision Tree";
+            this.successTitleDt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successTitleKn
+            // 
+            this.successTitleKn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successTitleKn.Location = new System.Drawing.Point(168, 32);
+            this.successTitleKn.Name = "successTitleKn";
+            this.successTitleKn.ReadOnly = true;
+            this.successTitleKn.Size = new System.Drawing.Size(113, 13);
+            this.successTitleKn.TabIndex = 1;
+            this.successTitleKn.Text = "K-Nearest Neighbour";
+            this.successTitleKn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // successTitleNb
+            // 
+            this.successTitleNb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.successTitleNb.Location = new System.Drawing.Point(36, 32);
+            this.successTitleNb.Name = "successTitleNb";
+            this.successTitleNb.ReadOnly = true;
+            this.successTitleNb.Size = new System.Drawing.Size(102, 13);
+            this.successTitleNb.TabIndex = 0;
+            this.successTitleNb.Text = "Naive-Bayes";
+            this.successTitleNb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.testButton);
+            this.groupBox1.Controls.Add(this.inputPanel);
+            this.groupBox1.Controls.Add(this.testResult);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(11, 255);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(776, 183);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Test Data";
+            // 
+            // testButton
+            // 
+            this.testButton.Location = new System.Drawing.Point(667, 39);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(75, 23);
+            this.testButton.TabIndex = 15;
+            this.testButton.Text = "Discover!";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            // 
+            // inputPanel
+            // 
+            this.inputPanel.Location = new System.Drawing.Point(8, 17);
+            this.inputPanel.Name = "inputPanel";
+            this.inputPanel.Size = new System.Drawing.Size(616, 154);
+            this.inputPanel.TabIndex = 14;
+            // 
+            // testResult
+            // 
+            this.testResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.testResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.testResult.Location = new System.Drawing.Point(657, 106);
+            this.testResult.Multiline = true;
+            this.testResult.Name = "testResult";
+            this.testResult.ReadOnly = true;
+            this.testResult.Size = new System.Drawing.Size(89, 65);
+            this.testResult.TabIndex = 13;
+            this.testResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(645, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(113, 13);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.Text = "Test Result";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxSuccessRates);
             this.Controls.Add(this.groupBoxInput);
             this.Name = "Form1";
@@ -301,6 +374,8 @@
             this.groupBoxInput.PerformLayout();
             this.groupBoxSuccessRates.ResumeLayout(false);
             this.groupBoxSuccessRates.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -329,6 +404,12 @@
         private System.Windows.Forms.TextBox successRtKn;
         public System.Windows.Forms.TextBox successPrcNb;
         public System.Windows.Forms.TextBox successPrcSvm;
+        private System.Windows.Forms.TextBox textMostSuccessful;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox testResult;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel inputPanel;
+        private System.Windows.Forms.Button testButton;
     }
 }
 
