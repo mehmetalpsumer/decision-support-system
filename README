@@ -1,5 +1,6 @@
 ## Description
-This is a simple WinForm app using Weka library to classify ARFF data. DLLs in lib folder must be imported.
+A Windows app using Weka library to classify ARFF data. DLLs in lib folder must be imported.
 
 ## Functionality
-After importing a ARFF file, and the app will train and test data, and provide input groups to let you test which group does the instance belong, using the method with the highest success rate.
+After importing an ARFF file, the app will train and test data.
+Then it will allow you to dynamically add new rows and see which group they belong, using the most successful method.
